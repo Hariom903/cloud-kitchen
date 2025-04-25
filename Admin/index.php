@@ -12,7 +12,9 @@
     
    <?php
    session_start();
+
     include("header.php");
+    
     if(isset($_GET['login']) && !isset($_SESSION['admin']['name'])){
     include("login.php");
     }

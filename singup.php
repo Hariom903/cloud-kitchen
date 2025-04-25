@@ -2,7 +2,7 @@
   
   if(isset($_SESSION['user'])){
     session_start();
-     header("location:./index.php");
+    echo " window.location.assign('http://localhost/Yummy/index.php?home=true')";
        exit();
      
   }
@@ -25,10 +25,12 @@ include("header.php"); ?>
     if($res){
        $_SESSION['user'] =['username'=>$username,'id'=>$id];
        if(isset($_SESSION["order_id"])){
-        header("location:./order.php");
+        // header("location:./order.php");
+        echo "<script> window.location.assign('http://localhost/Yummy/order.php') </script>";
        }
        else{
-        header("location:./index.php?home=true");
+        // header("location:./index.php?home=true");
+        echo "<script> window.location.assign('http://localhost/Yummy/index.php?home=true') </script>";
        }
     }
     }catch(Exception $e){

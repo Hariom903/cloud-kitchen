@@ -4,7 +4,9 @@ if (isset($_GET['order_id'])) {
     $_SESSION['order_id'] = $_GET['order_id'];
 }
 if (!isset($_SESSION['user'])) {
-    header("location:./login.php");
+    // header("location:./login.php");
+    echo "<script> window.location.assign('http://localhost/Yummy/login.php') </script>";
+    die();
 }
 ?>
 
@@ -86,10 +88,12 @@ if (!isset($_SESSION['user'])) {
     $order = "INSERT INTO order_list(`address`,`pincode`,`item_id`,`user_id`,`price`,`phone`,`status`) VALUES('$address',$pincode,$item_id,$user_id,$price1,'$mobile',0)";
     $res  = $conn->query($order);
    if($res){
-       echo "<script> alert('order succsefull done ') </script>";
-       // header("location:./my_order.php");
-       $_SESSION['order_id'] =NULL;
-       echo '<meta http-equiv="refresh" content="0">';
+    //    echo "<script> alert('order succsefull done ') </script>";
+     header("Location: http://localhost/Yummy/my_order.php");
+    // echo "<script> window.location.assign('http://localhost/Yummy/my_order.php') </script>";
+    //    unset($_SESSION['order_id']);
+    //    $_GET['order_id']='';
+    //    echo '<meta http-equiv="refresh" content="0">';
    }
 }
 catch(Exception $e ){

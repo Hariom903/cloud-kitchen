@@ -26,10 +26,10 @@
             <a href="../assets/img/menu/<?php echo $row['img_path']; ?>" ><img src="../assets/img/menu/<?php echo $row['img_path']; ?>" class=" img-fluid" width="50px"  alt=""></a>     
             </td>
             <td>
-             <form action="./deleteitem.php" method="POST">
+            
                 <button type="submit" value="<?php echo $row['id']; ?>" name="edit" class="btn btn-primary"> Edit  </button>
                 <button type="submit" value="<?php echo $row['id']; ?>"  name="delete"  class="btn btn-danger"> Delete  </button>
-             </form>  
+          
             </td>
            </tr>
 

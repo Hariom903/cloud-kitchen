@@ -1,4 +1,7 @@
-<?php session_start(); ?>
+<?php session_start();
+  ob_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -51,15 +54,15 @@
 
       <nav id="navmenu" class="navmenu">
         <ul>
-          <li><a href="index.php?home=true" class=" <?php echo $act = isset($_GET['home'])? 'active' : '' ?>">Home<br></a></li>
-          <li><a href="about.php?about=true" class=" <?php echo $act = isset($_GET['about'])? 'active' : '' ?>">About</a></li>
-          <li><a href="menu.php?category_id=1" class=" <?php echo $act = isset($_GET['category_id'])? 'active' : '' ?>">Menu</a></li>
-          <li><a href="EventsSection.php?event=true" class=" <?php echo $act = isset($_GET['event'])? 'active' : '' ?>">Events</a></li>
-          <li><a href="chefssection.php?chefs=true" class=" <?php echo $act = isset($_GET['chefs'])? 'active' : '' ?>">Chefs</a></li>
-          <li><a href="gallery.php?gallery=ture" class=" <?php echo $act = isset($_GET['gallery'])? 'active' : '' ?>">Gallery</a></li>
+          <li><a href="index.php?home=true" class=" <?php echo $act = isset($_GET['home']) ? 'active' : ''; ?>">Home<br></a></li>
+          <li><a href="about.php?about=true" class=" <?php echo $act = isset($_GET['about']) ? 'active' : ''; ?>">About</a></li>
+          <li><a href="menu.php?category_id=1" class=" <?php echo $act = isset($_GET['category_id']) ? 'active' : ''; ?>">Menu</a></li>
+          <li><a href="EventsSection.php?event=true" class=" <?php echo $act = isset($_GET['event']) ? 'active' : ''; ?>">Events</a></li>
+          <li><a href="chefssection.php?chefs=true" class=" <?php echo $act = isset($_GET['chefs']) ? 'active' : ''; ?>">Chefs</a></li>
+          <li><a href="gallery.php?gallery=ture" class=" <?php echo $act = isset($_GET['gallery']) ? 'active' : ''; ?>">Gallery</a></li>
           <?php if(!isset($_SESSION['user'])){ ?>
-          <li><a href="login.php?Login=ture" class=" <?php echo $act = isset($_GET['Login'])? 'active' : '' ?>">Login</a></li>
-          <li><a href="singup.php?singup=ture" class=" <?php echo $act = isset($_GET['singup'])? 'active' : '' ?>">Sing Up</a></li>
+          <li><a href="login.php?Login=ture" class=" <?php echo $act = isset($_GET['Login']) ? 'active' : ''; ?>">Login</a></li>
+          <li><a href="singup.php?singup=ture" class=" <?php echo $act = isset($_GET['singup']) ? 'active' : ''; ?>">Sing Up</a></li>
           <?php }else{ ?>
              <li><a href="./logout.php" >Logout</a></li>
              <li><a href="./my_order.php" >my order</a></li>
@@ -82,12 +85,12 @@
               <li><a href="#">Dropdown 4</a></li>
             </ul>
           </li>
-          <li><a href="Contact.php?contact=true" class=" <?php echo $act = isset($_GET['contact'])? 'active' : '' ?>">Contact</a></li>
+          <li><a href="Contact.php?contact=true" class=" <?php echo $act = isset($_GET['contact']) ? 'active' : '';?>">Contact</a></li>
         </ul>
         <i class="mobile-nav-toggle d-xl-none bi bi-list"></i>
       </nav>
 
-      <a class="btn-getstarted" href="Booktable.php?booktable=true" class=" <?php echo $act = isset($_GET['booktable'])? 'active' : '' ?>">Book a Table</a>
+      <a class="btn-getstarted" href="Booktable.php?booktable=true" class=" <?php echo $act = isset($_GET['booktable']) ? 'active' : ''; ?>">Book a Table</a>
 
     </div>
   </header>

@@ -1,9 +1,11 @@
-<?php include_once("header.php");?>
 <?php 
+
 if (!isset($_SESSION['user'])) {
-    header("location:./login.php");
-       exit();
+
+  header("Location: ./login.php");
+
 }
+ require_once("header.php");
  ?>
 
 <section id="book-a-table" class="book-a-table section">
