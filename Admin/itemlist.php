@@ -1,6 +1,7 @@
+
 <div class="container pt-5"> 
 <div class="table-responsive " > 
-<table class="table ">
+<table id="myTable" class="table ">
 <thead class="table-dark"> 
     <tr> 
         <th> Name  </th>
@@ -43,6 +44,7 @@
  </table>
 </div>
 </div>
+
 
 <?php  
  
